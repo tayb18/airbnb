@@ -19,7 +19,6 @@ class ListingsController < ApplicationController
 			name: params["listing"]["name"],
 			photo_url: params["listing"]["photo_url"]
 			})
-		binding.pry
 		redirect_to listings_path
 	end
 

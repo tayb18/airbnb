@@ -5,5 +5,7 @@
 <li><%= @user.bio %><li>
 <li><% @user.img_url %></li>
 
+<% if session[:user_id] %>
 <%= link_to 'Edit', edit_user_path(@user) %> 
+<% end %>
 </div>

@@ -26,16 +26,16 @@
 
 ##ERD:
 
-<img src="public/img/ERD.jpg"/>
+<img src="/public/img/ERD.jpg"/>
 
 
 ##Front-End Wire Frames: 
 
-<img src="public/img/welcomepage.jpg"/>
+<img src="/public/img/welcomepage.jpg"/>
 
-<img src="public/img/bookingrequest.jpg"/>
+<img src="/public/img/bookingrequest.jpg"/>
 
-<img src="public/img/BrowseListings.jpg"/>
+<img src="/public/img/BrowseListings.jpg"/>
 
 
 

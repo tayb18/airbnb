@@ -24,9 +24,9 @@ a {
 }
 
 .welcome-buttons {
-	max-width: 60%;
+	max-width: 70%;
 	background-color: rgba(255,255,255,0.5);
-	font-size: 32px;
+	font-size: 25px;
   padding: 20px;
   font-family: 'Arvo', serif;
   text-decoration: none;
@@ -49,3 +49,11 @@ a {
   font-family: 'Arvo', serif;
 }
 
+.listings {
+  font-size: 20px;
+}
+
+.listings_images {
+  height: 100px;
+  width: 150px;
+}

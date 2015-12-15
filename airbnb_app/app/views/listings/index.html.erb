@@ -3,4 +3,8 @@
 <div class="listings">
 	<% @listings.each do |listing| %>
 		<a href="listings/<%=listing.id%>"><%=listing.name%></a>
-	<%end%>
+			<%= form_for listing, url: listings_path(listing), html: {method: "delete"} do |f| %>
+			<%= f.submit "Remove From Listings" %>
+		<% end %>
+	<% end %>
+</div>

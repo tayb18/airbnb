@@ -1,16 +1,3 @@
-<h1>Signup</h1>
-  <%= form_tag '/signup' do %>
-    <%= label_tag(:name, "Name") %>
-    <%= text_field_tag :name %><br/>
-    <%= label_tag(:email, "Email") %>
-    <%= text_field_tag :email %><br/>
-    <%= label_tag(:img_url, "img_url") %>
-    <%= text_field_tag :img_url %><br/>
-    <%= label_tag(:bio, "Bio") %>
-    <%= text_field_tag :bio %><br/>
-    <%= label_tag(:password, "Password") %>
-    <%= password_field_tag :password %><br/>
-    <%= label_tag(:password_confirmation, "Password Confirmation") %>
-    <%= password_field_tag :password_confirmation %><br/>
-    <%= submit_tag("Signup") %>
-  <% end %>
+<h1>Sign Up</h1>
+
+<%= render 'form' %>

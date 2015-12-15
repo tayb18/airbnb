@@ -2,19 +2,19 @@
   <h1>Add a listing</h1>
   <%= form_for @listing do |f| %>
   	<%=f.label :name%>
-  	<%=f.text_field :name%>
+  	<%=f.text_field :name%><br/>
   	<%=f.label :address%>
-  	<%=f.text_field :address, :placeholder => "please include city, state, and zip"%>
+  	<%=f.text_field :address, :placeholder => "please include city, state, and zip"%><br/>
   	<%= f.label :neighborhood %>
-  	<%= f.text_field :neighborhood%>
+  	<%= f.text_field :neighborhood%><br/>
   	<%= f.label :price_per_night%>
-  	<%= f.text_field :price_per_night%>
+  	<%= f.text_field :price_per_night%><br/>
   	<%= f.label :description%>
-  	<%= f.text_area :description%>
+  	<%= f.text_area :description%><br/>
   	<%= f.label :photo_url%>
-  	<%= f.text_field :photo_url%>
+  	<%= f.text_field :photo_url%><br/>
   	<%= f.label :is_available%>
-  	<%= f.check_box :is_available%>
+  	<%= f.check_box :is_available%><br/>
   	<%= f.submit "Create Listing"%>
   <% end %>
 <% else %>

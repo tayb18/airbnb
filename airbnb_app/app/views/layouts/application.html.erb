@@ -8,7 +8,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <% if session[:id] %>
+    <div class="nav_bar">
+      <a class="nav_btn" href="/">Homepage</a>
+      <a class="nav_btn" href="/listings">Browse Listings</a>
+      <a class="nav_btn" href="/listings/new">Add a New Listing</a>
+      <a class="nav_btn"><%= link_to "View Profile", user_path(@user) %></a>
+      <a class="nav_btn"><%= link_to "Log Out", logout_url, method: :delete %></a>
+    </div>
+  <% else %>
+    <div class="nav_bar">
+      <a class="nav_btn" href="/">Homepage</a>
+      <a class="nav_btn" href="/listings">Browse Listings</a>
+      <a class="nav_btn" href="/users/new">Sign Up</a>
+      <a class="nav_btn" href="/login">Login</a>
+    </div>
+  <% end %>
 <%= yield %>
 
 </body>

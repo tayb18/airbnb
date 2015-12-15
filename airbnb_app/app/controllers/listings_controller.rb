@@ -14,11 +14,12 @@ class ListingsController < ApplicationController
 			neighborhood: params["listing"]["neighborhood"],
 			price_per_night: params["listing"]["price_per_night"],
 			description: params["listing"]["description"],
-			# user_id: session["user_id"],
+			user_id: session["user_id"],
 			is_available: params["listing"]["is_available"],
 			name: params["listing"]["name"],
 			photo_url: params["listing"]["photo_url"]
 			})
+		binding.pry
 		redirect_to listings_path
 	end
 
@@ -26,8 +27,12 @@ class ListingsController < ApplicationController
 		@listing = Listing.find(params[:id])
 	end
 
+	def update
+		@listing = Listing.find(params[:id])
+	end
+
 	def destroy
-		listing = Listing.find(params[:id].destroy)
+		listing = Listing.find(params[:id]).destroy
 			redirect_to listings_path
 	end
 end

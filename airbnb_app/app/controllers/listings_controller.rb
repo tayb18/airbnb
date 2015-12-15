@@ -21,7 +21,7 @@ class ListingsController < ApplicationController
 	end
 
 	def destroy
-		listing = Listing.find(params[:id].destroy
+		listing = Listing.find(params[:id].destroy)
 			redirect_to listings_path
 	end
 end

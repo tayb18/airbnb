@@ -2,15 +2,15 @@
 <div class="welcome-buttons">
 <% if session[:user_id] %> 
   <h1>Welcome to AirBnB</h1>
-  <a href="/listings">Browse Listings</a>
-  <a href="/listings/new">Add a New Listing</a>
-  <%= link_to "Profile", user_path(@user) %>
-  <%=link_to "Log Out", logout_url, method: :delete %>
+  <a href="/listings">Browse Listings</a><br/>
+  <a href="/listings/new">Add a New Listing</a><br/>
+  <a><%= link_to "Profile", user_path(@user) %></a><br/>
+  <a><%=link_to "Log Out", logout_url, method: :delete %></a><br/>
 <% else %>
   <h1>Welcome to AirBnB</h1>
-  <a href="/listings">Browse Listings</a>
-  <a href="/users/new">Sign Up</a>
-  <a href="/login">Login</a>
+  <a href="/listings">Browse Listings</a><br/>
+  <a href="/users/new">Sign Up</a><br/>
+  <a href="/login">Login</a><br/>
 <% end %>
 
 </div>

@@ -2,4 +2,5 @@
 
 <div class="listings">
 	<% @listings.each do |listing| %>
-	<a href="<%= listings_path"
+		<a href="<%= listings_path%>"><%=listing.name%></a>
+	<%end%>

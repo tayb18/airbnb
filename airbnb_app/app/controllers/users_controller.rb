@@ -14,10 +14,11 @@ class UsersController < ApplicationController
 			password: params[:password], 
 			password_confirmation: params[:password_confirmation]})
 
-		redirect_to listings_path 
+		redirect_to login_path 
 	end
 
 	def show
+		@user = User.find(params[:id])
 	end
 
 	def update

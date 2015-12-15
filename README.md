@@ -1,2 +1,17 @@
-# airbnb
-This is a collaborative project creating the Airbnb website.
+# Group Lab!
+
+##Airbnb
+
+
+##User Stories: 
+
+##Technologies Used:
+
+
+##ERD:
+
+<img src="public/img/ERD.jpg"/>
+
+##Front-End Wire Frames: 
+
+

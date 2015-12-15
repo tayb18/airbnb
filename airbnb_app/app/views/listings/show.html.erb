@@ -3,6 +3,7 @@
 <h4>Price Per Night: $<%=@listing.price_per_night%></h4>
 <p>Description: <%=@listing.description%></p>
 <img src="<%=@listing.photo_url%>">
+<a href="/listings/<%= @listing.id %>/edit">Edit this Listing</a>
 <a href="/listings">Back to Listings</a>
 
 

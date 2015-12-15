@@ -19,7 +19,6 @@ class ListingsController < ApplicationController
 			name: params["listing"]["name"],
 			photo_url: params["listing"]["photo_url"]
 			})
-		binding.pry
 		redirect_to listings_path
 	end
 
@@ -27,13 +26,23 @@ class ListingsController < ApplicationController
 		@listing = Listing.find(params[:id])
 	end
 
-	def update
+	def edit
 		@listing = Listing.find(params[:id])
+	end
+
+	def update
+		@listing = Listing.update(listing_params)
+		redirect_to listing_url
 	end
 
 	def destroy
 		listing = Listing.find(params[:id]).destroy
 			redirect_to listings_path
+	end
+
+	private
+	def listing_params
+		params.require(:listing).permit(:address, :neighborhood, :price_per_night, :description, :is_available, :name, :photo_url)
 	end
 end
 

@@ -13,8 +13,12 @@ class UsersController < ApplicationController
 			email: params[:email], 
 			password: params[:password], 
 			password_confirmation: params[:password_confirmation]})
+		if @user.save
+			redirect_to login_path 
+		else 
+			render :new
+		end 
 
-		redirect_to login_path 
 	end
 
 	def show

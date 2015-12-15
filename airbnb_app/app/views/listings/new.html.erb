@@ -1,20 +1,24 @@
-<h1>Add a listing</h1>
-<%=form_for @listing do |f|%>
-	<%=f.label :name%>
-	<%=f.text_field :name%>
-	<%=f.label :address%>
-	<%=f.text_field :address, :placeholder => "please include city, state, and zip"%>
-	<%= f.label :neighborhood %>
-	<%= f.text_field :neighborhood%>
-	<%= f.label :price_per_night%>
-	<%= f.text_field :price_per_night%>
-	<%= f.label :description%>
-	<%= f.text_area :description%>
-	<%= f.label :photo_url%>
-	<%= f.text_field :photo_url%>
-	<%= f.label :is_available%>
-	<%= f.check_box :is_available%>
-	<%= f.submit "Create Listing"%>
-<%end%>
-
+<% if session[:user_id] %> 
+  <h1>Add a listing</h1>
+  <%= form_for @listing do |f| %>
+  	<%=f.label :name%>
+  	<%=f.text_field :name%>
+  	<%=f.label :address%>
+  	<%=f.text_field :address, :placeholder => "please include city, state, and zip"%>
+  	<%= f.label :neighborhood %>
+  	<%= f.text_field :neighborhood%>
+  	<%= f.label :price_per_night%>
+  	<%= f.text_field :price_per_night%>
+  	<%= f.label :description%>
+  	<%= f.text_area :description%>
+  	<%= f.label :photo_url%>
+  	<%= f.text_field :photo_url%>
+  	<%= f.label :is_available%>
+  	<%= f.check_box :is_available%>
+  	<%= f.submit "Create Listing"%>
+  <% end %>
+<% else %>
+  <h1>Add a listing</h1>
+  <p>I'm sorry! You must be logged in to create a new listing. Log in and try again.</p>
+<% end %>
 
